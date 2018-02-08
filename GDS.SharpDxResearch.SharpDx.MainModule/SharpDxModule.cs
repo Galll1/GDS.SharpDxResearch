@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace GDS.SharpDxResearch.SharpDx.MainModule
 {
-    class SharpDxModule
+    public class SharpDxModule : IModule
     {
+
     }
 }
