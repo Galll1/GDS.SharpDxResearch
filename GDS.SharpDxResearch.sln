@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GDS.SharpDxResearch.Boot", "GDS.SharpDxResearch.Boot\GDS.SharpDxResearch.Boot.csproj", "{EED9A105-F561-46C4-8846-B5764D092446}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DirectX", "DirectX", "{1A9862AD-D7A8-4F3F-9C36-9DC0CE1D2987}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GDS.SharpDxResearch.SharpDx.MainModule", "GDS.SharpDxResearch.SharpDx.MainModule\GDS.SharpDxResearch.SharpDx.MainModule.csproj", "{228D6993-6297-4B80-A067-096F2DEA5026}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +19,16 @@ Global
 		{EED9A105-F561-46C4-8846-B5764D092446}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EED9A105-F561-46C4-8846-B5764D092446}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EED9A105-F561-46C4-8846-B5764D092446}.Release|Any CPU.Build.0 = Release|Any CPU
+		{228D6993-6297-4B80-A067-096F2DEA5026}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{228D6993-6297-4B80-A067-096F2DEA5026}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{228D6993-6297-4B80-A067-096F2DEA5026}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{228D6993-6297-4B80-A067-096F2DEA5026}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{228D6993-6297-4B80-A067-096F2DEA5026} = {1A9862AD-D7A8-4F3F-9C36-9DC0CE1D2987}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {12F6CBA1-973F-4062-A8DC-13AC9B989501}
