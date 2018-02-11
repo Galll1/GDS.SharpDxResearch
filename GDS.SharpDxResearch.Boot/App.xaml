@@ -4,6 +4,14 @@
              xmlns:local="clr-namespace:GDS.SharpDxResearch.Boot"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+            <ResourceDictionary>
+                <ResourceDictionary.MergedDictionaries>
+                    <ResourceDictionary Source="pack://application:,,,/GDS.SharpDxResearch.GraphicObjects;component/Resources.xaml"/>
+                    
+                </ResourceDictionary.MergedDictionaries>
+            </ResourceDictionary>
+        <DataTemplate DataType="{x:Type vm:DxObjectViewModel}">
+            <v:DxObject/>
+        </DataTemplate>
     </Application.Resources>
 </Application>

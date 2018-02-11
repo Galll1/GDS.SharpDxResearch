@@ -131,6 +131,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GDS.SharpDxResearch.GraphicObjects\GDS.SharpDxResearch.GraphicObjects.csproj">
+      <Project>{1b2b842d-eb29-4399-aea2-d873777b01e9}</Project>
+      <Name>GDS.SharpDxResearch.GraphicObjects</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GDS.SharpDxResearch.SharpDx.MainModule\GDS.SharpDxResearch.SharpDx.MainModule.csproj">
       <Project>{228d6993-6297-4b80-a067-096f2dea5026}</Project>
       <Name>GDS.SharpDxResearch.SharpDx.MainModule</Name>
