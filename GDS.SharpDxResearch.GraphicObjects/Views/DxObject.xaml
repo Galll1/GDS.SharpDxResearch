@@ -13,7 +13,7 @@
                 <GeometryModel3D.Material>
                     <DiffuseMaterial>
                         <DiffuseMaterial.Brush>
-                            <SolidColorBrush Color="Red"/>
+                            <SolidColorBrush Color="White"/>
                         </DiffuseMaterial.Brush>
                     </DiffuseMaterial>
                 </GeometryModel3D.Material>

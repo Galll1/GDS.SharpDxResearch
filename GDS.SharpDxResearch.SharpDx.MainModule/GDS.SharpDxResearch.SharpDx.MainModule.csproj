@@ -126,6 +126,10 @@
       <Project>{1B2B842D-EB29-4399-AEA2-D873777B01E9}</Project>
       <Name>GDS.SharpDxResearch.GraphicObjects</Name>
     </ProjectReference>
+    <ProjectReference Include="..\GDS.SharpDxResearch.ResourceLoad\GDS.SharpDxResearch.ResourceLoad.csproj">
+      <Project>{B2057C79-0FC0-495C-853D-1D666D6F39C2}</Project>
+      <Name>GDS.SharpDxResearch.ResourceLoad</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

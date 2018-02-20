@@ -9,11 +9,12 @@ namespace GDS.SharpDxResearch.GraphicObjects.ViewModels
     {
         public Point3DCollection Positions { get; set; }
         public Int32Collection TriangleIndices { get; set; }
+        public Vector3DCollection Normals { get; set; }
 
         public DxObjectViewModel()
         {
-            Positions = new Point3DCollection(GetObjectPositionPoints());
-            TriangleIndices = new Int32Collection(GetObjectTriangleIndices());
+            //Positions = new Point3DCollection(GetObjectPositionPoints());
+            //TriangleIndices = new Int32Collection(GetObjectTriangleIndices());
         }
 
         private IEnumerable<int> GetObjectTriangleIndices()

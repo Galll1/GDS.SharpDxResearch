@@ -9,6 +9,7 @@ using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Media3D;
 using GDS.SharpDxResearch.GraphicObjects.Controls;
+using GDS.SharpDxResearch.GraphicObjects.ViewModels;
 using HelixToolkit.Wpf;
 using Prism.Mvvm;
 
@@ -33,10 +34,10 @@ namespace GDS.SharpDxResearch.SharpDx.MainModule.Extensions
 
         private void AddConstantValues()
         {
-            SunLight sun = new SunLight() {ShowLights = true};
-            ThreePointLights three = new ThreePointLights() { ShowLights = true };
-            DirectionalHeadLight dir = new DirectionalHeadLight() { ShowLights = true, Color = Colors.Yellow};
-            GridLinesVisual3D grid = new GridLinesVisual3D() {Width = 8, Length = 8, MinorDistance = 1, MajorDistance = 1, Thickness = 0.01};
+            SunLight sun = new SunLight() {ShowLights = false};
+            ThreePointLights three = new ThreePointLights() { ShowLights = false };
+            DirectionalHeadLight dir = new DirectionalHeadLight() { ShowLights = false, Color = Colors.Yellow};
+            GridLinesVisual3D grid = new GridLinesVisual3D() {Width = 500, Length = 500, MinorDistance = 10, MajorDistance = 10, Thickness = 0.01};
 
             Children.Add(sun);
             Children.Add(three);
@@ -81,7 +82,19 @@ namespace GDS.SharpDxResearch.SharpDx.MainModule.Extensions
 
                     DxUserControl userControl = Activator.CreateInstance(viewType) as DxUserControl;
                     userControl.DataContext = viewModel;
-                    visuals.Add(userControl.GetVisual3D());
+                    Visual3D visual3D = userControl.GetVisual3D();
+                    ModelVisual3D model = visual3D as ModelVisual3D;
+                    GeometryModel3D geom = model.Content as GeometryModel3D;
+                    DxObjectViewModel castedViewModel = viewModel as DxObjectViewModel;
+
+                    geom?.Geometry
+                        ?.SetValue(MeshGeometry3D.PositionsProperty, castedViewModel?.Positions);
+                    geom?.Geometry
+                        ?.SetValue(MeshGeometry3D.TriangleIndicesProperty, castedViewModel?.TriangleIndices);
+                    geom?.Geometry
+                        ?.SetValue(MeshGeometry3D.NormalsProperty, castedViewModel?.Normals);
+
+                    visuals.Add(visual3D);
                 }
             }
 
