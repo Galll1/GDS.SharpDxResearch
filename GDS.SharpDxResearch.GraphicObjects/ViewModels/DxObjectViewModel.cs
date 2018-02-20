@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Windows.Media;
 using System.Windows.Media.Media3D;
+using Prism.Mvvm;
 
 namespace GDS.SharpDxResearch.GraphicObjects.ViewModels
 {
-    public class DxObjectViewModel
+    public class DxObjectViewModel : BindableBase
     {
         public Point3DCollection Positions { get; set; }
         public Int32Collection TriangleIndices { get; set; }

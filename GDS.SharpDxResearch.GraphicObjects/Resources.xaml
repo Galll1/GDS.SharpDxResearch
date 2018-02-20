@@ -1,8 +1,6 @@
 ﻿<ResourceDictionary xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:vm="clr-namespace:GDS.SharpDxResearch.GraphicObjects.ViewModels"
-                    xmlns:v="clr-namespace:GDS.SharpDxResearch.GraphicObjects.Views">
-    <DataTemplate DataType="{x:Type vm:DxObjectViewModel}">
-        <v:DxObject/>
-    </DataTemplate>
+                    xmlns:v="clr-namespace:GDS.SharpDxResearch.GraphicObjects.Views"
+                    xmlns:helix="http://helix-toolkit.org/wpf">
 </ResourceDictionary>

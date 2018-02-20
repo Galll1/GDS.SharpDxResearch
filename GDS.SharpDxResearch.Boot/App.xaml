@@ -2,16 +2,23 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:GDS.SharpDxResearch.Boot"
+             xmlns:vm="clr-namespace:GDS.SharpDxResearch.GraphicObjects.ViewModels;assembly=GDS.SharpDxResearch.GraphicObjects"
+             xmlns:v="clr-namespace:GDS.SharpDxResearch.GraphicObjects.Views;assembly=GDS.SharpDxResearch.GraphicObjects"
+             xmlns:extensions="clr-namespace:GDS.SharpDxResearch.SharpDx.MainModule.Extensions;assembly=GDS.SharpDxResearch.SharpDx.MainModule"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-            <ResourceDictionary>
-                <ResourceDictionary.MergedDictionaries>
-                    <ResourceDictionary Source="pack://application:,,,/GDS.SharpDxResearch.GraphicObjects;component/Resources.xaml"/>
-                    
-                </ResourceDictionary.MergedDictionaries>
-            </ResourceDictionary>
-        <DataTemplate DataType="{x:Type vm:DxObjectViewModel}">
-            <v:DxObject/>
-        </DataTemplate>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/GDS.SharpDxResearch.GraphicObjects;component/Resources.xaml"/>
+                <ResourceDictionary>
+                    <extensions:CustomResourceDictionaryValue Key="{x:Type vm:DxObjectViewModel}" >
+                        <v:DxObject/>
+                    </extensions:CustomResourceDictionaryValue>
+                    <!--<DataTemplate DataType="{x:Type vm:DxObjectViewModel}">
+                        <v:DxObject/>
+                    </DataTemplate>-->
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
